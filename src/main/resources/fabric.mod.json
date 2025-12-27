@@ -1,0 +1,38 @@
+{
+	"schemaVersion": 1,
+	"id": "hagds_tpa",
+	"version": "${version}",
+	"name": "hagds_tpa",
+	"description": "This is an example description! Tell everyone what your mod is about!",
+	"authors": [
+		"Me!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/hagds_tpa/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.hagds.tpa.tpa"
+		],
+		"client": [
+			"com.hagds.tpa.Hagds_tpaClient"
+		]
+	},
+	"mixins": [
+		"hagds_tpa.mixins.json",
+		{
+			"config": "hagds_tpa.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.18.1",
+		"minecraft": "~1.21.10",
+		"java": ">=21",
+		"fabric-api": "*"
+	}
+}
